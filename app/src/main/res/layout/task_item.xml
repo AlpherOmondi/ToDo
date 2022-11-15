@@ -2,24 +2,26 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:padding="8dp">
 
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/task_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:margin="16dp" />
+        android:minWidth="0dp"
+        android:minHeight="0dp" />
 
     <TextView
         android:id="@+id/task_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/checkBox"
-        android:layout_alignBottom="@id/checkBox"
-        android:layout_alignParentRight="@+id/checkBox"
-        android:layout_toEndOf="@id/checkBox"
+        android:layout_alignTop="@id/task_checkbox"
+        android:layout_alignBottom="@id/task_checkbox"
+        android:layout_toStartOf="@id/img_priority"
+        android:layout_toEndOf="@id/task_checkbox"
         android:ellipsize="end"
         android:gravity="center_vertical"
         android:maxLines="1"
@@ -27,11 +29,12 @@
         tools:text="Task one" />
 
     <ImageView
+        android:id="@+id/img_priority"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/checkBox"
-        android:layout_alignBottom="@id/checkBox"
+        android:layout_alignTop="@id/task_text"
+        android:layout_alignBottom="@id/task_text"
         android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
         android:src="@drawable/ic_priority" />
 </RelativeLayout>
