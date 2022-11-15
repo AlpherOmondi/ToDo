@@ -10,7 +10,7 @@ import java.text.DateFormat
 @Entity(tableName = "task_table")
 // this annotation enables data to be passed from one fragment to another.
 @Parcelize
-data class Note(
+data class Task(
     val taskName: String,
     val isImportant: Boolean,
     val isCompleted: Boolean,
