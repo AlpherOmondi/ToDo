@@ -16,7 +16,7 @@ data class Task(
     val isCompleted: Boolean,
     val dateCreated: Long,
     //annotation enables each task to be unique
-    @PrimaryKey(autoGenerate = true) val taskId: Int
+    @PrimaryKey(autoGenerate = true) val taskId: Int=0
 ) : Parcelable {
     val formattedDateCreated
         get() = DateFormat.getDateTimeInstance().format(dateCreated)
